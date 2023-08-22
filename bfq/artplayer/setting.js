@@ -11,13 +11,12 @@ function urlcs(variable) {
 	return (false);
 }
 
-var art = new Artplayer(
-    {
-        container: '.artplayer-app',
-        url: 'https://artplayer.org/assets/sample/video.mp4',
-        muted: true,
-    },
-    art.on('ready', () => {
+var art = new Artplayer({
+    container: '.artplayer-app',
+    url: 'https://artplayer.org/assets/sample/video.mp4',
+    muted: true,
+});
+
+art.on('ready', () => {
     art.play();
 });
-);
