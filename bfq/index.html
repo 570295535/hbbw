@@ -13,7 +13,7 @@ body{background:#235}
     <title>播放器</title>
 </head>
 <div class="videobox" style="margin-top:150px;margin-bottom:20px;">
-        <iframe src="" id="videoplayer" width="100%" height="200px" allowTransparency="true" frameborder="0" scrolling="no" allow="autoplay" allowfullscreen="true" webkitallowfullscreen="true" mozallowfullscreen="true"></iframe>
+        <iframe src="" id="videoplayer" width="100%" height="200px" allowTransparency="true" frameborder="0" scrolling="no" allowfullscreen="true" webkitallowfullscreen="true" mozallowfullscreen="true"></iframe>
 </div>
 <div class="toplink">
         <input id="videourl" type="text" placeholder="视频 URL" value="https://muiplayer.js.org/media/media.m3u8">
@@ -27,9 +27,10 @@ var bfq = document.getElementById("videoplayer");
     bjk.onclick =function(){  
         bjk.value="";
     }
-//点击播放按钮
+//点击播放按钮，等待4秒自动播放
     bf.onclick =function(){  
         bfq.src = 'https://hebei-baowen.com/bfq/videoplayer.html?url='+bjk.value;
+		setTimeout(function(){bfq.onclick()},4000);
     }
 </script>
 </body>
