@@ -41,7 +41,7 @@ var art = new Artplayer({
         fastForward: false,//是否在移动端添加长按视频倍速功能
         playsInline: false,//类似网页全屏播放
         autoPlayback: false,//是否使用自动回放功能
-        airplay: false,//是否显示airplay按钮
+        airplay: true,//是否显示airplay按钮
         whitelist: ['*'],//白名单
         customType: {
         m3u8: function (video, url) {
