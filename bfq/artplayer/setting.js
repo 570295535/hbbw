@@ -17,7 +17,7 @@ var art = new Artplayer(
         url: 'https://artplayer.org/assets/sample/video.mp4',
         muted: true,
     },
-    function onReady(art) {
-        this.play()
-    },
+    art.on('ready', () => {
+    art.play();
+});
 );
