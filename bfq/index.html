@@ -27,10 +27,14 @@ var bfq = document.getElementById("artplayer");
     bjk.onclick =function(){  
         bjk.value="";
     }
-//点击播放按钮
+//点击播放按钮，如果编辑框有值就播放，否则什么都不做
     bf.onclick =function(){  
-        bfq.src = 'https://hebei-baowen.com/bfq/artplayer.html?url='+bjk.value;
-    }
+        if(bjk.value){
+			bfq.src = 'https://hebei-baowen.com/bfq/artplayer.html?url='+bjk.value;
+    	}else{
+			return;
+		}
+	}
 </script>
 </body>
 </html>
