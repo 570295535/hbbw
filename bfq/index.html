@@ -6,14 +6,14 @@
 <style>
 body{background:#235}
 .toplink,.videobox{position:relative;display:flex;width:100%;justify-content:center!important;cursor:pointer}
-#videourl,#videoplayer{width:100%;font-size:1rem;font-weight:400;line-height:1.5;color:#9bd;background-color:#235;border:1px solid #ced4da;border-radius:.25rem}
-#videoplayer{border:0}
+#videourl,#artplayer{width:100%;font-size:1rem;font-weight:400;line-height:1.5;color:#9bd;background-color:#235;border:1px solid #ced4da;border-radius:.25rem}
+#artplayer{border:0}
 #playbutton{background:#123;border:0;cursor:pointer}
 </style>
     <title>播放器</title>
 </head>
 <div class="videobox" style="margin-bottom:20px;">
-        <iframe src="" id="videoplayer" width="100%" height="400px" allowTransparency="true" frameborder="0" scrolling="no" allowfullscreen="true" webkitallowfullscreen="true" mozallowfullscreen="true"></iframe>
+        <iframe src="" id="artplayer" width="100%" height="400px" allowTransparency="true" frameborder="0" scrolling="no" allowfullscreen="true" webkitallowfullscreen="true" mozallowfullscreen="true"></iframe>
 </div>
 <div class="toplink">
         <input id="videourl" type="text" placeholder="视频 URL" value="https://muiplayer.js.org/media/media.m3u8">
@@ -22,14 +22,14 @@ body{background:#235}
 <script>
 var bjk = document.getElementById("videourl");
 var bf = document.getElementById("playbutton");
-var bfq = document.getElementById("videoplayer");
+var bfq = document.getElementById("artplayer");
 //点击编辑框去掉默认value链接
     bjk.onclick =function(){  
         bjk.value="";
     }
 //点击播放按钮
     bf.onclick =function(){  
-        bfq.src = 'https://hebei-baowen.com/bfq/videoplayer.html?url='+bjk.value;
+        bfq.src = 'https://hebei-baowen.com/bfq/artplayer.html?url='+bjk.value;
     }
 </script>
 </body>
