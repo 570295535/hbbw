@@ -16,7 +16,7 @@ var art = new Artplayer({
         container: '.artplayer-app',
         title: 'Your Name',
         url: urlcs("url"),
-        poster: '/artplayer/bfqbjt.jpg',//视频播放前，播放器的背景图
+        poster: '/bfq/artplayer/bfqbjt.jpg',//视频播放前，播放器的背景图
         theme: '#23ade5',//进度条颜色
         volume: 1,//音量0.1-1
         isLive: false,//是否使用直播模式，会隐藏进度条和播放时间
