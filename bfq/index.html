@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+<style>
+body{background:#235}
+.toplink,.videobox{position:relative;display:flex;width:100%;justify-content:center!important;cursor:pointer}
+#videourl,#videoplayer{width:80%;padding:.200rem .50rem;font-size:1rem;font-weight:400;line-height:1.5;color:#9bd;background-color:#235;border:1px solid #ced4da;border-radius:.25rem}
+#videoplayer{border:0}
+#playbutton{background:#123;border:0;cursor:pointer}
+</style>
+    <title>播放器</title>
+</head>
+<div class="toplink">
+        <input id="videourl" type="text" placeholder="视频 URL" value="https://bitdash-a.akamaihd.net/content/sintel/hls/playlist.m3u8">
+        <button id="playbutton" type="button"><img src="https://m3u8play.com/static/static/play.png" width="32" height="32"></button>
+</div>
+<div class="videobox" style="margin-top:10px;">
+        <iframe src="" id="videoplayer" width="100%" height="200px" allowTransparency="true" frameborder="0" scrolling="no" allowfullscreen="true" webkitallowfullscreen="true" mozallowfullscreen="true"></iframe>
+</div>
+<script>
+var bjk = document.getElementById("videourl");
+var bf = document.getElementById("playbutton");
+var bfq = document.getElementById("videoplayer");
+//点击编辑框去掉默认value链接
+    bjk.onclick =function(){  
+        bjk.value="";
+    }
+//点击播放按钮
+    bf.onclick =function(){  
+        bfq.src = 'https://hebei-baowen.com/bfq/videoplayer?url='+bjk.value;
+    }
+</script>
+</body>
+</html>
