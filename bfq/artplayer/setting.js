@@ -16,12 +16,12 @@ var art = new Artplayer({
         container: '.artplayer-app',
         title: 'Your Name',
         url: urlcs("url"),
-        poster: 'file:///data/data/com.aaa/files/xsz/artplayer/bfqbjt.jpg',//视频播放前，播放器的背景图
+        poster: '/artplayer/bfqbjt.jpg',//视频播放前，播放器的背景图
         theme: '#23ade5',//进度条颜色
         volume: 1,//音量0.1-1
         isLive: false,//是否使用直播模式，会隐藏进度条和播放时间
         muted: false,//是否默认静音
-        autoplay: false,//是否自动播放
+        autoplay: true,//是否自动播放
         screenshot: false,//截图按钮
         pip: false,//画中画按钮
         autoSize: false,//控件自适应视频尺寸，false表示不适应，而是让控件填充窗口
