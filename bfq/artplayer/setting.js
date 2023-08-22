@@ -87,3 +87,7 @@ art.on('resize', (...args) => {//在播放器尺寸发生变化时触发
             $(".art-setting-item").eq(2).click();$(".art-setting-item-left-text").eq(2).click();
     }
 });
+
+setTimeout(function () {
+    art.play();//自动播放
+}, 5000);
