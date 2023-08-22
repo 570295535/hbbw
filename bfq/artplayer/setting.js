@@ -13,32 +13,36 @@ function urlcs(variable) {
 
 var coun = 0;
 var art = new Artplayer({
-    container: '.artplayer-app',
-    url: urlcs("url"),
-    poster: '/bfq/artplayer/bfqbjt.jpg',
-    volume: 1,
-    isLive: false,
-    muted: false,
-    autoplay: true,
-    pip: false,
-    autoSize: false,
-    autoMini: false,
-    screenshot: false,
-    setting: true,
-    loop: true,
-    flip: false,
-    playbackRate: true,
-    aspectRatio: true,
-    fullscreen: true,
-    fullscreenWeb: false,
-    subtitleOffset: false,
-    miniProgressBar: false,
-    mutex: true,
-    backdrop: true,
-    playsInline: false,
-    autoPlayback: false,
-    airplay: true,
-    theme: '#23ade5',
+        container: '.artplayer-app',
+        title: 'Your Name',
+        url: urlcs("url"),
+        poster: '/bfq/artplayer/bfqbjt.jpg',//视频播放前，播放器的背景图
+        theme: '#23ade5',//进度条颜色
+        volume: 1,//音量0.1-1
+        isLive: false,//是否使用直播模式，会隐藏进度条和播放时间
+        muted: false,//是否默认静音
+        autoplay: true,//是否自动播放
+        screenshot: false,//截图按钮
+        pip: false,//画中画按钮
+        autoSize: false,//控件自适应视频尺寸，false表示不适应，而是让控件填充窗口
+        autoMini: false,//迷你小窗按钮
+        setting: true,//设置按钮
+        loop: false,//是否循环播放
+        playbackRate: true,//倍速播放
+        aspectRatio: true,//画面比例功能
+        flip: false,//画面翻转功能
+        fullscreen: true,//全屏
+        fullscreenWeb: false,//网页全屏
+        autoOrientation: false,//是否在移动端的网页全屏时，根据视频尺寸和视口尺寸，自动旋转播放器
+        subtitleOffset: false,//字幕时间偏移，范围在 [-5s, 5s]
+        miniProgressBar: false,//播放时，底部是否显示进度条
+        mutex: true,//如果多个播放器，是否只让一个播放器播放
+        lock: true,//移动端是否显示一个小锁，用于隐藏底部控制栏
+        fastForward: false,//是否在移动端添加长按视频倍速功能
+        playsInline: false,//类似网页全屏播放
+        autoPlayback: false,//是否使用自动回放功能
+        airplay: true,//是否显示airplay按钮
+        whitelist: ['*'],//白名单
         customType: {
             m3u8: function (video, url) {
                 if (Hls.isSupported()) {
